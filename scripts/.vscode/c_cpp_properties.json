@@ -1,0 +1,53 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/enlighten/catkin_ws/devel/include/**",
+        "/home/enlighten/ws_livox/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/enlighten/catkin_ws/src/cam_topic_saver/include/**",
+        "/home/enlighten/catkin_ws/src/data_logger/include/**",
+        "/home/enlighten/catkin_ws/src/FAST_LIO/include/**",
+        "/home/enlighten/catkin_ws/src/FAST-LIO-SAM/fast_lio_sam/include/**",
+        "/home/enlighten/catkin_ws/src/FAST-LIO-SAM-QN/fast_lio_sam_qn/include/**",
+        "/home/enlighten/catkin_ws/src/flir_lepton/flir_lepton_image_processing/include/**",
+        "/home/enlighten/catkin_ws/src/flir_lepton/flir_lepton_sensor/include/**",
+        "/home/enlighten/catkin_ws/src/gps_fusion_exercise/include/**",
+        "/home/enlighten/catkin_ws/src/obstacle_detector/include/**",
+        "/home/enlighten/catkin_ws/src/obstacle_tracker/include/**",
+        "/home/enlighten/catkin_ws/src/microstrain_mips/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_4w/mobinn_4w_bringup/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_4w/mobinn_4w_slam/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_lidar_obstacle_detector/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_localization_fastlio/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_nav/mobinn_planning_control/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_simulator/include/**",
+        "/home/enlighten/catkin_ws/src/nano_gicp/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_obstacle_detector/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_ocam/include/**",
+        "/home/enlighten/catkin_ws/src/ouster_example/ouster_gazebo_plugins/include/**",
+        "/home/enlighten/catkin_ws/src/ouster-ros/include/**",
+        "/home/enlighten/catkin_ws/src/Quatro/include/**",
+        "/home/enlighten/catkin_ws/src/realsense_gazebo_plugin/include/**",
+        "/home/enlighten/catkin_ws/src/rgbd_obstacle_detection/rgbd_obstacle_detection/include/**",
+        "/home/enlighten/catkin_ws/src/rs485_exercise/include/**",
+        "/home/enlighten/catkin_ws/src/mobinn_4w/sound_play/include/**",
+        "/home/enlighten/catkin_ws/src/ublox_f9p/ublox_gps/include/**",
+        "/home/enlighten/catkin_ws/src/ublox_f9p/ublox_msgs/include/**",
+        "/home/enlighten/catkin_ws/src/ublox_f9p/ublox_serialization/include/**",
+        "/home/enlighten/catkin_ws/src/usb_cam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
