@@ -19,7 +19,7 @@ import platform
 
 import rospy
 from sensor_msgs.msg  import Image
-from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import Float32MultiArray, MultiArrayDimension
 
 # initialize the node
 rospy.init_node('thermal_node', anonymous=True)
@@ -27,9 +27,20 @@ rospy.init_node('thermal_node', anonymous=True)
 # define the publisher
 pub = rospy.Publisher('thermal_image', Float32MultiArray, queue_size=1000)
 
-# define the multiarray
 thermal_array = Float32MultiArray()
-thermal_array.data = [0.0] * 3
+
+# thermal_array.data = [0.0] * (120 * 160)
+
+# Define the layout of the array (120 rows, 160 columns)
+# thermal_array.layout.dim = [
+#     MultiArrayDimension(label="height", size=120, stride=120*160),
+#     MultiArrayDimension(label="width", size=160, stride=160)
+# ]
+
+# Initialize the data field with zeros (120*160 elements)
+
+# define the multiarray
+# thermal_array.data = [0.0] * 3
 
 
 import rospy
@@ -165,7 +176,12 @@ def main(vis = False):
           max_coords = np.unravel_index(max_index, c_thermal.shape)
           # print(f"Max Coords : {max_coords}")
           # rospy.loginfo(f"\n ##### Thermal Image ##### {np.argmax(c_thermal)}")
-          thermal_array.data = [c_thermal.max(), max_coords[1] / 160 , max_coords[0] / 120] # max_temp, x, y
+          # original code
+          # thermal_array.data = [c_thermal.max(), max_coords[1] / 160 , max_coords[0] / 120] # max_temp, x, y
+          # full map
+          # rospy.loginfo(f"\n ##### Thermal Image ##### {c_thermal}")
+          thermal_array.data = c_thermal.flatten().tolist() # max_temp, x, y
+
           # rospy.loginfo(f"\n ##### Thermal Image ##### {thermal_array}")
 
           # publish thermal_array
